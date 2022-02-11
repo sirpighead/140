@@ -7,15 +7,98 @@ body {
 }
 
 
-section {
-    width: 50%;
-    margin: 0 auto;
+.container {
+    display: grid;
+    grid-template-columns: [media-start] 1fr [media-end main-text-start] minmax(450px, 1fr) [main-text-end images-start] 1fr [images-end];
+    grid-template-rows: [title-start] auto [title-end about-start] auto [about-end bio-start] auto [bio-end mid-start] auto [mid-end] auto [links-end] auto [last];
+    gap: 5% 5%;
+}
+
+#item-video {
+    grid-column: media-start / media-end;
+    grid-row: about-start / about-end;
+    justify-self: stretch;
+    margin-left: 10%;
+}
+
+#item-title {
+    grid-column: main-text-start / main-text-end;
+    grid-row: title-start / title-end;
+}
+
+#item-about {
+    grid-column: main-text-start / main-text-end;
+    grid-row: about-start / about-end;
+}
+
+#item-bio {
+    grid-column: main-text-start / main-text-end;
+    grid-row: bio-start / bio-end;
+}
+
+#item-links {
+    grid-column: main-text-start / main-text-end;
+    grid-row: mid-start / links-end;
+}
+
+#image-wheel {
+    grid-column: images-start / images-end;
+    grid-row: bio-start / mid-end;
+}
+
+#image-hat {
+    grid-column: images-start / images-end;
+    grid-row: mid-end / links-end;
+}
+
+
+#background-img {
+    background-image: url(images/harley.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-column: images-start / images-end;
+    grid-row: about-start / about-end;
+    width: 100%;
+    min-width: 100px;
+    min-height: 100px;
+    height: 100%;
+    background-position: center, center;
+}
+
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+
+h1 {
+    font-size: 2rem;
+    margin: 3% 0 0 0;
+}
+
+
+h2 {
+    margin: 0;
+    padding-bottom: 1%;
+}
+
+
+.bordered-text {
     border:mediumspringgreen solid;
     border-radius: 8px;
-    margin-bottom: 5vh; margin-top: 1vh;
     padding:1vh;
     padding-top: 0;
 }
+
 
 ul, ol {
     list-style-position: outside;
