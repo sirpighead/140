@@ -1,0 +1,103 @@
+/* This should allow the box-sizing property of border box to be inherited by all elements. 
+*/
+:root {
+    box-sizing: border-box;
+    font-size:100%;
+ }
+ 
+ *, ::after, ::before {
+    box-sizing: inherit;
+    margin: 0; 
+    padding: 0;
+    border: 0;
+ }
+
+ body {
+    background-color: #e4fcf8;
+    padding: 2em;
+    font-size: 1.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+ }
+
+ main {
+    max-width: 96vw;
+    padding: 0 1em 0 1em;
+ }
+
+ header {
+    background-color: #6ac4d4;
+    padding: .8em;
+    border-bottom: #23408f;
+    border-style: solid;
+ }
+
+ h1 {
+    padding-top: 0;
+    text-align: center;
+    color: white;
+ }
+
+ h2 {
+    padding: .5em 0 .5em 0;
+    color:#23408f;
+    clear: both;
+ }
+
+ section {
+    padding-top: 2.4em;
+ }
+
+ p {
+    font-size: .8em;
+    line-height: 1.8em;
+    padding: 0 1em 0 1em;
+ }
+
+ img {
+    max-width: 100%;
+ }
+
+ span {
+    background-color: #ADFF2F;
+ }
+
+ a:link {
+   line-height: 1.4em;
+ }
+ a:hover {
+    font-weight: bold;
+ }
+ a:visited{
+    color:darkgreen;
+ }
+
+ .right {
+    float: right;
+ }
+
+ .left {
+    float: left;
+    margin: 0 3.2em 2.4em 0;
+    width: 48vw;
+ }
+
+ .right-column {
+    float: right;
+    min-width:240px;
+    max-width: 48vw;
+    margin: 0 0 2.4em 3.2em;
+ }
+
+ .pano-skyline {
+    width: 100vw;
+ }
+
+ .line-length {
+    max-width: 72vw;
+ }
+
+ .copyright {
+    text-align: right;
+    color: maroon;
+ }

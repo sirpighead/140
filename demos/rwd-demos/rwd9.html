@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+.wrapper { width: 90%; margin: 0 auto; }
+.sidebar { width: 30%; margin-right: 2%; }
+.content { width: 68%; }
+
+.sidebar, .content {
+  height: 250px;
+  float: left;
+  color: #FFF;
+  font-family: Arial;
+  text-align: center;
+}
+
+.sidebar {
+	background-image: url("fallcolors1.jpg");
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size: 100%, auto;
+	}
+
+.content { background-color:#456322; }
+
+h1 { padding: 100px 0; font-size: 1em; }
+
+@media screen and (max-width: 1080px) {
+	.sidebar { width:100%; background-image: url("fallcolors2.jpg"); margin-bottom: 10px;}
+	.content { width: 100%; }
+}
+
+@media screen and (max-width: 640px) {
+    .sidebar { background-image: url("fallcolors3.jpg"); }
+    .content { background-color: red; }
+}
+
+@media screen and (max-width: 400px) {
+	.sidebar { display: none; }
+	.content { background-color: #322456; }
+}
+
+</style>
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="sidebar"></div>
+  <div class="content"><h1>Content</h1></div>
+</div>
+</body>
+</html>
+

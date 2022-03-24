@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .wrapper { width: 90%; margin: 0 auto; }
+  .sidebar { width: 31%; margin-right: 2%; }
+  .content { width: 67%; }
+
+  .sidebar, .content {
+  background: #888;
+  height: 250px;
+  float: left;
+  color: #FFF;
+  font-family: Helvetica;
+  text-align: center;
+  }
+
+  h1 { padding: 100px 0; font-size: 1em; }
+
+  @media screen and (max-width: 1080px) {
+    .content { width: 100%; }
+    .sidebar { width: 100%; }
+  }
+  
+  @media screen and (max-width: 640px) {
+    .content { background-color: red; }
+    .sidebar { background-color:blue; }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar { display: none; }
+  }
+  
+</style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="sidebar"> <h1>Sidebar</h1> </div>
+    <div class="content"> <h1>Content</h1> </div>
+  </div>
+  
+</body>
+</html>

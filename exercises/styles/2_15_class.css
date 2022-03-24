@@ -1,0 +1,27 @@
+body {
+    text-align: left;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#text_container {
+    width: 40%;
+    margin-left: 20%;
+}
+
+#img_container {
+    float: right;
+    margin-right: 20%;
+}
+
+#color {
+    background-color: red;
+    position: fixed;
+    left: 0;
+    top: 70vh;
+    width: 30%; 
+    height: 30%;
+}
