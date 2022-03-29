@@ -14,6 +14,7 @@ h1, h2, h3 {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
 #banner {
     margin: 0;
     min-width: 100%;
@@ -41,9 +42,6 @@ nav li {
     display: inline;
 }
 
-h1, h2 {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
 
 h1 {
     border-bottom: 5px solid darksalmon;

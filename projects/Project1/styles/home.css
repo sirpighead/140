@@ -40,6 +40,8 @@ p{
 footer {
     padding: 0% 10% 0% 10%;
     border-top: 5px solid darksalmon;
+    text-align: left;
+    clear:both;
 }
 
 nav {
@@ -76,13 +78,14 @@ nav li {
     float:left; /*TEMPORARY until grid is implemented */
 }
 .image > img {
-    width: 30vw;
+    width: 100%;
     min-width: 300px;
 }
 
 figcaption {
     font-size: .6rem;
     text-align: justify;
+    word-wrap: break-word;
 }
 
 a {
