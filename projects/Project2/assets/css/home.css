@@ -1,0 +1,48 @@
+/* font imports for header */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&family=Staatliches&display=swap');
+
+body {
+    background-color: rgb(6, 6, 48);
+    color:white;
+    margin: 0 2% 0 2%;
+}
+
+header {
+    display: grid;
+    grid-template-columns: max-content min-content;
+    align-items: end;
+    justify-content: space-between;
+
+    color: rgb(255, 187, 219);
+    font-size: 2em;
+    
+
+    border-bottom: 3px rgb(92, 92, 92) solid;
+    margin: 0 2% 0 2%;
+    padding: 2% 0 2% 0;
+}
+header img {
+    width:30vw;
+}
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: .5rem;
+}
+header h2 {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+main {
+    margin: 5% 4% 10% 4%;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+figure {
+    width:40%;
+}
+figure img {
+    width:100%;
+}
