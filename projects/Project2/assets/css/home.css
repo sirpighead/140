@@ -8,7 +8,13 @@
 body {
     background-color: rgb(6, 6, 48);
     color:white;
-    margin: 0 2% 0 2%;
+    overflow-x:hidden;
+}
+body::-webkit-scrollbar{
+    height:10px;
+}
+body::-webkit-scrollbar-thumb {
+    background: white;
 }
 
 header {
@@ -41,7 +47,7 @@ header h2 {
 }
 
 main {
-    margin: 5% 4% 10% 4%;
+    margin: 5% 4% 0 4%;
     font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
     display: grid;
@@ -66,6 +72,7 @@ section {
 figure {
     width:96%;
     margin: 2%;
+    
 }
 figure img {
     width:100%;
@@ -77,6 +84,65 @@ figcaption {
     font-family: 'Roboto Slab', serif;
     font-weight: bolder;;
     font-size: .8em;
+}
+
+
+/* inspired by "CSS-only-carousel" on css-tricks.com */
+.gallery {
+    width: 80vw;
+    margin: 10% 0 0 0;
+    padding: 5% 10vw;
+    background: linear-gradient(to bottom, rgb(6, 6, 48), 40%,  black);
+}
+.gallery h2 {
+    margin-bottom: 5%;
+    text-align: center;
+    font-family:'Staatliches', cursive;
+    letter-spacing: .4rem;
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+.gallery h3 {
+    display: none;
+    text-align: center;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+    font-size:.6em;
+    letter-spacing: .1em;
+}
+.slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.slides > figure {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: 100%;
+    margin-right: 50px;
+    position: relative;
+    overflow-y:hidden;
+}
+.slides::-webkit-scrollbar{
+    height:10px;
+}
+.slides::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+.slides figcaption {
+    text-align: center;
+    padding:1% 2%;
+    font-size:.6em;
+
+    /* display: none; */
+    z-index: 1;
+    position: absolute;
+    height: fit-content;
+    width:96%;
+    top: 82%;
+    background-color: rgba(0,0,0,.6);
 }
 
 
@@ -92,11 +158,15 @@ figcaption {
     header img {
         width: 40%;
     }
-    figure {
+    main figure {
         display: grid;
         grid-template-columns: 2fr 1fr;
         justify-content: space-evenly;
         align-items: center;
+    }
+
+    figcaption {
+        font-size:1em;
     }
 
     #megaboat {
@@ -134,6 +204,26 @@ figcaption {
     header {
         font-size: 1.5em;
     }
+
+    .gallery {
+        width: 60vw;
+        padding: 5% 20vw;
+    }
+    .gallery h2 {
+        font-size: 3em;
+        margin:0;
+    }
+    .gallery h3 {
+        display:block;
+        font-size: .8em;
+    }
+    .slides figcaption{
+        opacity:0;
+        transition: opacity .2s ease-out;
+    }
+    .slides figure:hover figcaption {
+        opacity: 1;
+    }
 }
 
 
@@ -154,8 +244,15 @@ figcaption {
         text-align: justify;
     }
 
+    .gallery {
+        width: 50vw;
+        padding: 5% 25vw;
+    }
+    .slides figcaption {
+        font-size: 1em;
+    }
 
-    figure {
+    main figure {
         display:block;
         width: 100%;
         height:100%;
